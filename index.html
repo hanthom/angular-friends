@@ -15,8 +15,8 @@
       <div class="form-group">
 
           
-        <input class="form-control" placeholder="Search Name" ng-model="searchName">
-        <input class="form-control" placeholder="Search Location" ng-model="searchLocation">
+        <input class="form-control" placeholder="Search Name" ng-model="search.name">
+        <input class="form-control" placeholder="Search Location" ng-model="search.current_location.$">
           
 
         <select class="input-medium" ng-model="sort">
@@ -35,21 +35,21 @@
       </div>
     </form>
     
-    <ul ng-repeat="friend in friends | filter:{name:searchName} | filter:{current_location:{city:searchLocation}} | orderBy: sort: ascdes">
+    <ul ng-repeat="friend in friends | filter: search | orderBy: sort: ascdes">
       <li class='friend'>
         <img class="profile-pic" src={{friend.pic_square}}>
 
         <h3 ng-bind="friend.name"></h3>
 
-        <div class="location"> <!-- ng-bind="friend.current_location" -->
+        <div class="location" ng-show="friend.current_location"> 
           Location: {{friend.current_location.city}}, {{friend.current_location.state}}, {{friend.current_location.country}}
         </div>
 
-        <div class="status">
+        <div class="status" ng-show="friend.status">
           Status: {{friend.status.message}}
         </div>
 
-        <div class="num-friends">
+        <div class="num-friends" ng-show="friend.friend_count">
           Friends: {{friend.friend_count}}
         </div>
       </li>
