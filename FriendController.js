@@ -5,7 +5,9 @@ $scope.addFriend = function(newFriend) {
 		$scope.newFriendInput = '';
 	}
 
-	
+	// $scope.searchAttrOptions = [
+	// 	for black diamond part...
+	// ]
 
 
 	$scope.friends = [
