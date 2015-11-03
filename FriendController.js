@@ -6,8 +6,20 @@ $scope.addFriend = function(newFriend) {
 	}
 
 	// $scope.searchAttrOptions = [
-	// 	for black diamond part...
+	// 	{ label: 'Name', value: 'name'},
+	// 	{label: '#Friends', value: 'friend_count'},
+	// 	{ label: 'City', value: 'current_location.city'},
+	// 	{ label: 'State', value: 'current_location.state'},
+	// 	{ label: 'Country', value: 'current_location.country'}
 	// ]
+
+	// $scope.friends.map(function(friendObj) { BLACK DIAMOND - FINISH!
+	// 	if (!friendObj.current_location) {
+	// 		friendObj.current_location = {
+	// 			//empty strings for each item
+	// 		}
+	// 	}
+	// })
 
 
 	$scope.friends = [
